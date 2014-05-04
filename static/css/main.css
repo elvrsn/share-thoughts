@@ -1,0 +1,58 @@
+.header {
+border-bottom: 2px solid #F2F2F2;
+background-color:#484848;
+}
+
+.justify {
+    text-align: justify;
+}
+.bottom-border {
+  border-bottom: 2px solid #787878;
+}
+.top-padding {
+    padding-top:10px;
+}
+.top-padding-25 {
+    padding-top:25px;
+}
+
+.footer {
+    padding-top:10px;
+    background-color:#484848;
+    color:#fff;
+}
+.logo {
+    display: block;
+    float: left;
+    font-family: 'Kaushan Script',cursive;
+    font-size: 20px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    text-align: center;
+}
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+.top-buffer {
+    margin-top:45px; 
+}
+
+.centered {
+    text-align:center;
+}
+
+.logo-text:hover,
+.logo-text:visited,
+.logo-text:active {
+    /*color:#428bca;*/
+    color:#fff; 
+    text-decoration: none;
+}
+
+.content-color {
+    background-color:#F0F0F0;
+}
+

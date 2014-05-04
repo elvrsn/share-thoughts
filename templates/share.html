@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row top-buffer">
+    <div class="col-xs-11 col-sm-10 col-md-8 col-centered">
+        <form role="form" name="content-form" method="post" action='/thanks'>
+            {% csrf_token %}
+            <div class="form-group">
+                <select class="form-control" name="category">
+                  <option value="" disabled selected>Choose Category</option>
+                  {% for option in options %}
+                      <option name="{{option.name}}" value="{{option.name}}">{{option.name}}</option>
+                  {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <label for="textt">Content</label>
+                <textarea rows="10" cols="50" class="form-control" id="textt" name="content" placeholder="Content"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tags">Tags</label>
+                <input type="text" class="form-control" id="tags" name="tags" placeholder="Tags">
+            </div>
+            <div class="centered top-padding-25">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

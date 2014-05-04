@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row top-buffer">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    {% for content in contents%}
+       <div class="top-padding">
+         <h3>{{ content.title }}</h3>
+       </div>
+       <div class="justify">
+         <p>{{ content.text }}</p>
+       </div>
+       <div class="bottom-border">
+         <p>
+             <b>Tagged under : </b>
+             {% for tag in content.tags%}
+                 <a>{{ tag }}</a>
+                 {% if not forloop.last %}
+                  ,
+                 {% endif %}
+             {% endfor %}
+         </p>
+       </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

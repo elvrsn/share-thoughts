@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>iwas - ideas worth a share</title>
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet" type='text/css' />
+    <link href="{{ STATIC_URL }}css/main.css" rel="stylesheet" type='text/css' />
+</head>
+<body>
+    <div class='container content-color'>
+      {% block header %}
+        <div class='row header'>
+          <div class="col-xs-8 col-sm-8 col-md-8">
+            <a class='logo logo-text' href='/'>Ideas Worth A Share</a>
+          </div>
+          {% if share %}
+              <div class="col-xs-4 col-sm-4 col-md-4 top-padding">
+                <div class="pull-right">
+                  <a href='/share'><button type="button" class="btn btn-default btn-sm"><b>Share</b></button></a>
+                </div>
+              </div>
+          {% endif %}
+        </div>
+      {% endblock %}
+      {% block content %}
+      {% endblock %}
+      {% block footer %}
+        <div class='row footer top-buffer'>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="text-center">
+              <p>Copyright 2014 &copy; elvrsn</p>
+              <p>All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      {% endblock %}
+    </div>
+</body>
+</html>
