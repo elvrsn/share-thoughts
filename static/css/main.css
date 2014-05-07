@@ -52,7 +52,40 @@ background-color:#484848;
     text-decoration: none;
 }
 
+.clean_anchor {
+    color:#fff;
+    text-decoration: none;
+}
+.clean_anchor_text:hover,
+.clean_anchor_text:visited,
+.clean_anchor_text:active {
+    color:#fff;
+    text-decoration: none;
+}
+
 .content-color {
     background-color:#F0F0F0;
 }
 
+.field-validation-error
+{
+     color: #b94a48;
+}
+
+.recaptchatable .recaptcha_image_cell, #recaptcha_table {
+    background-color:#F0F0F0 !important;
+}
+  
+#recaptcha_table {
+    border-color:#99AACC !important;
+    table-layout: auto;
+}
+  
+#recaptcha_response_field {
+    border-color: #99AACC !important; 
+    background-color: #fff !important;
+}
+
+.recaptcha_only_if_privacy {
+    color:#000;
+}
