@@ -2,8 +2,17 @@
 {% block content %}
 <div class="row top-buffer">
   <div class="col-xs-12 col-sm-12 col-md-12">
-    <p>Thanks for sharing. Your content was saved to the DB.</p>
-    <p>It will be published when it is approved by a moderator.</p>
+    <p>Drop Us Your Comments</p>
+    <form  role="form" name="feedback-form" method="post" action='/feedback_thanks/'>
+     {% csrf_token %}
+     <div class="form-group">
+       <label for="textt">Comments</label>
+       <textarea rows="10" cols="50" class="form-control" id="feedback" name="feedback" placeholder="Your Comments"></textarea>
+     </div>
+      <div class="centered top-padding-25">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </form>
   </div>
 </div>
 {% endblock %}

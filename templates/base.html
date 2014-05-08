@@ -12,8 +12,13 @@
     <div class='container content-color'>
       {% block header %}
         <div class='row header'>
-          <div class="col-xs-8 col-sm-8 col-md-8">
+          <div class="col-xs-8 col-sm-8 col-md-4">
             <a class='logo logo-text' href='/'>Share Thoughts</a>
+          </div>
+          <div class="hidden-xs hidden-sm col-md-4 top-padding">
+             <form>
+               <input class="form-control" type="text" name="search-tag" placeholder="Search Tags"></input>
+            </form>
           </div>
           {% if share %}
               <div class="col-xs-4 col-sm-4 col-md-4 top-padding">
@@ -23,6 +28,13 @@
               </div>
           {% endif %}
         </div>
+        <div class="row top-padding">
+          <div class="col-xs-12 col-sm-10 hidden-md hidden-lg">
+            <form>
+               <input class="form-control" type="text" name="search-tag" placeholder="Search Tags"></input>
+            </form>
+          </div>
+        </div>
       {% endblock %}
       {% block content %}
       {% endblock %}
@@ -31,8 +43,8 @@
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="text-center">
               <p>
-                  <a  class='clean_anchor clean_anchor_text' href="/about">About the site</a> | 
-                  <a  class='clean_anchor clean_anchor_text' href="/feedback">Tip us</a>
+                  <a class='clean_anchor clean_anchor_text' href="/about">About the site</a> |
+                  <a class='clean_anchor clean_anchor_text' href="/feedback">Tip us</a>
               </p>
               <p>Copyright 2014 &copy; elvrsn</p>
             </div>

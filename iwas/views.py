@@ -54,4 +54,8 @@ def feedback(request):
     return render_to_response('feedback.html',{'share':True},context_instance=RequestContext(request))
 
 def feedback_thanks(request):
+    if request.method=='POST':
+        ip_address = get_client_ip(request)
+        comment = request.POST.get('feedback','')
+        save_feedback(comment, ip_address)
     return render_to_response('feedback_thanks.html',{'share':True},context_instance=RequestContext(request))

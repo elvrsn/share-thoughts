@@ -27,6 +27,10 @@ def save_text(title,text,tags,category):
     time = str(datetime.datetime.now())
     TextTable.objects.create(title=title,text=text,tags=tags,timestamp=time,category=category)
 
+def save_feedback(comment, ip_address):
+    time = str(datetime.datetime.now())
+    VisitorFeedback.objects.create(ip = ip_address, comments = comment,timestamp = time)
+
 def retrieve_data():
     return TextTable.objects.all().order_by('-timestamp')
 
